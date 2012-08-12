@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="jquery_file_uploadDemo"
+  id="myeclipse.1342328554643"
+  context-root="/springmvcdemo"
+  j2ee-spec="5.0"
+  archive="jquery_file_uploadDemo.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+
