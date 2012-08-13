@@ -4,15 +4,18 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>logon</title>
- 
+
 	</head>
 	<body>
-	
-	
-	${path}
-	<br>
-	登录页面
-	
 
+
+		${path}
+		<br>
+			登录页面 <br />
+
+
+			<div>
+				<a href="${path}/FileUploadCtrl/showFileUploadCtrl.do">文件上传测试</a>
+			</div>
 	</body>
 </html>
