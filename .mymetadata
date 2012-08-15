@@ -2,7 +2,7 @@
 <project-module
   type="WEB"
   name="jquery_file_uploadDemo"
-  id="myeclipse.1342328554643"
+  id="myeclipse.1344950666971"
   context-root="/shangchuan"
   j2ee-spec="5.0"
   archive="jquery_file_uploadDemo.war">
