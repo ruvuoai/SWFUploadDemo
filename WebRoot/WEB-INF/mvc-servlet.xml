@@ -76,8 +76,7 @@
 		<bean id="exceptionResolver"
 		class="com.me.exceptions.BaseExceptionHandler" />
 	-->
-
-	<bean class="com.me.init.EncodingPostProcessor" />
+	
 
 </beans>
 
