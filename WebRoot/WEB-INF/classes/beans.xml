@@ -23,7 +23,8 @@
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
 		destroy-method="close">
 		<property name="driverClass" value="net.sourceforge.jtds.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:jtds:sqlserver://127.0.0.1:1433;databaseName=db_name;SelectMethod=cursor" />
+		<property name="jdbcUrl"
+			value="jdbc:jtds:sqlserver://127.0.0.1:1433;databaseName=db_name;SelectMethod=cursor" />
 		<property name="user" value="sa" />
 		<property name="password" value="!@#$%12345" />
 		<!-- 最多创建多少链接 -->
@@ -37,25 +38,24 @@
 	</bean>
 
 	<!-- spring集成 NutDao -->
-	<!-- 
-		<bean id="dao" class="org.nutz.dao.impl.NutDao">
-			<property name="dataSource" ref="dataSource" />
-		</bean>
-	 -->
+	<!--
+		<bean id="dao" class="org.nutz.dao.impl.NutDao"> <property
+		name="dataSource" ref="dataSource" /> </bean>
+	-->
 
 	<!--所有services-->
 	<!-- 自动检测注解 -->
-	<!-- 
+	<!--
 		<context:component-scan base-package="com.me.biz" />
 		<context:component-scan base-package="com.me.common.init" />
-	 -->
+	-->
 
 	<!-- 将datasource交spring事务管理 -->
 	<bean id="txManager"
 		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
-	
+
 
 	<!-- 开启事务注解功能 -->
 	<tx:annotation-driven transaction-manager="txManager" />
@@ -66,6 +66,7 @@
 			<ref bean="dataSource" />
 		</property>
 	</bean>
+
 	
 </beans>
 

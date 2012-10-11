@@ -58,11 +58,10 @@
 	-->
 
 	<!-- 拦截器-处理编码、超时登录 -->
-	<!-- 
-		<mvc:interceptors>
-			<bean class="com.me.interceptors.AppInerceptor" />
+	<!--
+		<mvc:interceptors> <bean class="com.me.interceptors.AppInerceptor" />
 		</mvc:interceptors>
-	 -->
+	-->
 
 	<!-- 文件上传  -->
 	<!--  这里申明的id必须为multipartResolver  -->
@@ -71,10 +70,15 @@
 		<!-- one of the properties available; the maximum file size in bytes -->
 		<!-- <property name="maxUploadSize" value="100000" /> -->
 	</bean>
-	
+
 	<!-- 配置自定义异常类 -->
-	<!-- <bean id="exceptionResolver" class="com.me.exceptions.BaseExceptionHandler" /> -->
-	
+	<!--
+		<bean id="exceptionResolver"
+		class="com.me.exceptions.BaseExceptionHandler" />
+	-->
+
+	<bean class="com.me.init.EncodingPostProcessor" />
+
 </beans>
 
 
