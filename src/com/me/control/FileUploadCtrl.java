@@ -57,6 +57,14 @@ public class FileUploadCtrl
     }
     
 
+    @RequestMapping("/showFileUploadCtrl4")
+    public String showFileUploadCtrl4()
+    {
+        return "test04";
+    }
+    
+    
+
     @RequestMapping(value = "/doupload", method = RequestMethod.POST, produces = "text/json")
     public String handleFormUpload(@RequestParam("Filedata") MultipartFile file,
                                    @RequestParam("requestid") String requestid,

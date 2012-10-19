@@ -31,9 +31,13 @@
 			</div>
 			
 			<div>
-				<a href="${path}/FileUploadCtrl/showFileUploadCtrl3.do">文件上传测试3--精简配置-没有上传进度</a>
+				<a href="${path}/FileUploadCtrl/showFileUploadCtrl3.do">文件上传测试3--精简配置-自定义触发事件</a>
 			</div>
 			
+			<div>
+				<a href="${path}/FileUploadCtrl/showFileUploadCtrl4.do">文件上传测试3--精简上一个-去掉进度提示</a>
+			</div>
+						
 			
 	</body>
 </html>
