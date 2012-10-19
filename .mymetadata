@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-module
   type="WEB"
-  name="SWFUpploadDemo"
+  name="SWFUploadDemo"
   id="myeclipse.1344950666971"
   context-root="/shangchuan"
   j2ee-spec="5.0"
-  archive="SWFUpploadDemo.war">
+  archive="SWFUploadDemo.war">
   <attributes>
     <attribute name="webrootdir" value="/WebRoot" />
   </attributes>

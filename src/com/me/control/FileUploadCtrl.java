@@ -50,13 +50,19 @@ public class FileUploadCtrl
         return "test02";
     }
 
+    @RequestMapping("/showFileUploadCtrl3")
+    public String showFileUploadCtrl3()
+    {
+        return "test03";
+    }
+    
 
     @RequestMapping(value = "/doupload", method = RequestMethod.POST, produces = "text/json")
     public String handleFormUpload(@RequestParam("Filedata") MultipartFile file,
                                    @RequestParam("requestid") String requestid,
                                    @RequestParam("fieldName") String fieldName)
     {
-
+	
         System.out.println("--\r\n");
         System.out
                 .println("requestid=" + requestid + ";fieldName=" + fieldName);

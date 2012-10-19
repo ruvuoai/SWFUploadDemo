@@ -2,10 +2,10 @@
 <#assign path="${request.getContextPath()}">
 <title>SWFUpload Demos - Simple Demo</title>
 <link type="text/css" rel="stylesheet" href="${path}/resource2/default.css">
-<script src="${path}/resource2/swfupload.js" type="text/javascript"></script>
-<script src="${path}/resource2/swfupload.queue.js" type="text/javascript"></script>
-<script src="${path}/resource2/fileprogress.js" type="text/javascript"></script>
-<script src="${path}/resource2/handlers.js" type="text/javascript"></script>
+<script src="${path}/resource2/swfupload.js" ></script>
+<script src="${path}/resource2/swfupload.queue.js" ></script>
+<script src="${path}/resource2/fileprogress.js" ></script>
+<script src="${path}/resource2/handlers.js" ></script>
 <script type="text/javascript">
 		var swfu;
 		
@@ -16,7 +16,7 @@
 				post_params : {
 							"requestid" : "123", 
 							"fieldName":"photo"  
-						},
+				},
 				file_types : "*.jpg;*.gif",
 				file_types_description : "图片文件",
  				custom_settings : {
@@ -36,7 +36,7 @@
 				button_text_top_padding: 3,
 				
 				// The event handler functions are defined in handlers.js
-				file_queued_handler : fileQueued,
+				//file_queued_handler : fileQueued,
 				file_queue_error_handler : fileQueueError,
 				file_dialog_complete_handler : fileDialogComplete,
 				upload_start_handler : uploadStart,
@@ -46,10 +46,12 @@
 				upload_complete_handler : uploadComplete,
 				queue_complete_handler : queueComplete	// Queue plugin event
 			};
-
+			
 			swfu = new SWFUpload(settings);
 	     };
 	</script>
+	
+	
 </head>
 <body>
  

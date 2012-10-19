@@ -20,7 +20,6 @@ function fileQueued(file) {
 	} catch (ex) {
 		this.debug(ex);
 	}
-
 }
 
 function fileQueueError(file, errorCode, message) {
