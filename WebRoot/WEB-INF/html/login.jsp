@@ -37,7 +37,10 @@
 			<div>
 				<a href="${path}/FileUploadCtrl/showFileUploadCtrl4.do">文件上传测试3--精简上一个-去掉进度提示</a>
 			</div>
-						
+		 	
+		 	<div>
+				<a href="${path}/FileUploadCtrl/showFileUploadCtrl5.do">文件上传测试5--base pre one-限制仅能选择一个</a>
+			</div>
 			
 	</body>
 </html>

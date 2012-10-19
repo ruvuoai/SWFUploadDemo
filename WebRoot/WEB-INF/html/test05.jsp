@@ -2,18 +2,19 @@
 <#assign path="${request.getContextPath()}">
 <title>SWFUpload Demos - Simple Demo</title>
 <link type="text/css" rel="stylesheet"
-	href="${path}/resource4/default.css">
-<script src="${path}/resource4/swfupload.js"></script>
-<script src="${path}/resource4/swfupload.queue.js"></script>
-<script src="${path}/resource4/fileprogress.js"></script>
-<script src="${path}/resource4/handlers.js"></script>
+	href="${path}/resource5/default.css">
+<script src="${path}/resource5/swfupload.js"></script>
+<script src="${path}/resource5/swfupload.queue.js"></script>
+<script src="${path}/resource5/fileprogress.js"></script>
+<script src="${path}/resource5/handlers.js"></script>
 <script type="text/javascript">
 
 		var swfu;
 		window.onload = function() {
 			var settings = {
-				flash_url : "${path}/resource4/swfupload.swf",
+				flash_url : "${path}/resource5/swfupload.swf",
 				upload_url: "${path}/FileUploadCtrl/doupload.do",
+				file_queue_limit:"1",
 				post_params : {
 							"requestid" : "123", 
 							"fieldName":"photo"  
@@ -27,14 +28,14 @@
 				},
 		 		
 				// Button settings
-				button_image_url: "${path}/resource4/TestImageNoText_65x29.png",
-				button_width: "65",
+				button_image_url: "${path}/resource5/bg_import.gif",
+				button_width: "75",
 				button_height: "29",
 				button_placeholder_id: "spanButtonPlaceHolder",
-				button_text: '<span class="theFont">上传</span>',
+				button_text: '<span class="theFont">导入</span>',
 				button_text_style: ".theFont {width:50px; height:25px; font-size:12px; text-align:center;vertical-align: middle; font-family:'微软雅黑', ''黑体; color:#1c527a; }}",
-				button_text_left_padding: 12,
-				button_text_top_padding: 3,
+				button_text_left_padding: 30,
+				button_text_top_padding: 5,
 				
 				//触发事件
 				file_queued_handler : fileQueued,

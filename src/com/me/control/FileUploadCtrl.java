@@ -63,6 +63,12 @@ public class FileUploadCtrl
         return "test04";
     }
     
+    @RequestMapping("/showFileUploadCtrl5")
+    public String showFileUploadCtrl5()
+    {
+        return "test05";
+    }
+    
     
 
     @RequestMapping(value = "/doupload", method = RequestMethod.POST, produces = "text/json")
