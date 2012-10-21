@@ -28,6 +28,7 @@ public class WebPath
     }
 
 
+
     /**
      * 取得项目的classes文件夹 eg："C:/tomcat6/webapps/v/WEB-INF/classes/"
      * 
@@ -35,10 +36,12 @@ public class WebPath
      */
     public static String getClassRootPath()
     {
-        URL url = WebPath.class.getClassLoader().getResource("");
-        String out = url.toString();// file:/C:/tomcat6/webapps/v/WEB-INF/classes/
-        out = out.substring(6);
-        return out;// C:/tomcat6/webapps/v/WEB-INF/classes/
+        URL url = WebPath.class.getResource("WebPath.class");
+        String path = url.getPath();
+        path = path.substring(0,
+                              path.lastIndexOf("classes")) + "classes"
+                + File.separatorChar;
+        return path;
     }
 
 
