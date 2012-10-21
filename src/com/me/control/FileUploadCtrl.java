@@ -115,7 +115,7 @@ public class FileUploadCtrl
         // UploadedFile u = new UploadedFile(filename, Long
         // .valueOf(file.getSize()).intValue(), filename);
         // uploadedFiles.add(u);
-        return "login";// 随便指定一个页面返回就行了
+        return "login";
     }
 
 }
