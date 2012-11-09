@@ -68,8 +68,8 @@ public class FileUploadCtrl {
     @RequestMapping("/showFileUploadCtrl6")
     public ModelAndView showFileUploadCtrl6() {
 	ModelAndView mod = new ModelAndView();
-	mod.setViewName("test06");
 	mod.addObject("fileId", StringUT.getUUID());
+	mod.setViewName("test06");
 	return mod;
     }
 
@@ -86,7 +86,7 @@ public class FileUploadCtrl {
 	OutputStream output = null;
 	File outfile = null;
 	try {
-	    filename = new String(filename.getBytes("iso-8859-1"), "UTF-8");
+	    filename = new String(filename.getBytes("ISO-8859-1"), "UTF-8");
 	    String folderpath = WebPath.getUploadRootPath();
 	    String filePath = folderpath + filename;
 

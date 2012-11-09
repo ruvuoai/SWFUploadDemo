@@ -167,8 +167,6 @@ function uploadError(file, errorCode, message) {
 function uploadComplete(file) {
 	if (this.getStats().files_queued === 0) {
 		document.getElementById(this.customSettings.cancelButtonId).disabled = true;
-		//
-		this.setPostParams({"requestid" : "000","fieldName":"111"});
 	}
 }
 
