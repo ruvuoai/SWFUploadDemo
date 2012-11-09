@@ -22,9 +22,8 @@
 			登录页面 
 			<br />
 			<div>
-				<a href="${path}/FileUploadCtrl/showFileUploadCtrl.do">文件上传测试</a>
+				<a href="${path}/FileUploadCtrl/showFileUploadCtrl.do">文件上传测试1--官方示例</a>
 			</div>
-			
 			
 			<div>
 				<a href="${path}/FileUploadCtrl/showFileUploadCtrl2.do">文件上传测试2--更改按钮上的文字</a>
@@ -35,11 +34,15 @@
 			</div>
 			
 			<div>
-				<a href="${path}/FileUploadCtrl/showFileUploadCtrl4.do">文件上传测试3--精简上一个-去掉进度提示</a>
+				<a href="${path}/FileUploadCtrl/showFileUploadCtrl4.do">文件上传测试4--精简上一个-去掉进度提示</a>
 			</div>
 		 	
 		 	<div>
 				<a href="${path}/FileUploadCtrl/showFileUploadCtrl5.do">文件上传测试5--base pre one-限制仅能选择一个</a>
+			</div>
+			
+			<div>
+				<a href="${path}/FileUploadCtrl/showFileUploadCtrl6.do">文件上传测试6-项目中正在使用的例子</a>
 			</div>
 			
 	</body>

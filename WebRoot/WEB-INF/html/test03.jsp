@@ -17,8 +17,8 @@
 							"requestid" : "123", 
 							"fieldName":"photo"  
 				},
-				file_types : "*.xls",
-				file_types_description : "Excel 2003",
+				file_types : "*.*",
+				file_types_description : "所有文件",
  				custom_settings : {
 					progressTarget : "fsUploadProgress",
 					cancelButtonId : "btnCancel",
