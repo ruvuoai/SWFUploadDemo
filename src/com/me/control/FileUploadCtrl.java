@@ -168,6 +168,9 @@ public class FileUploadCtrl
                 fileName = new String(file.getOriginalFilename()
                         .getBytes("ISO-8859-1"), "UTF-8");
 
+                //删除文件名中的单引号，因为有单引号的时候，文件名会被截断，js变量不能传递。
+                fileName=StringUtils.replace(fileName, "'", "");
+                
                 System.out.println("上传的文件的文件名是：" + (fileName));
                 String filepath = StringUT.getUploadFiles(requestid);
                 filepath = filepath + fieldName + "/";

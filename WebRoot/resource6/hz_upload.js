@@ -184,14 +184,13 @@ function createSwf(fileId,fieldName,btnTxt,fileListObj,sysPath, btnbgWidth)
 						upload_error_handler : uploadError,
 						upload_success_handler : function(file, data)
 						{
-							var href="javascript:delFile('"+fileId+"','"+fieldName+"','"+file.name+"','"+sysPath+"')";
+							var href="javascript:delFile('"+fileId+"','"+fieldName+"','"+replace_(file.name)+"','"+sysPath+"')";
 							if($(fileListObj).html().indexOf(href)<0)
 							{
-								var  temp=hz_encode(file.name);
  								$(fileListObj).prepend(
-										"<div><a href=\""+sysPath+"/FileUploadCtrl/downFile.do?requestid="+fileId+"&fieldName="+fieldName+"&fileName="+temp+"&d="+getTime()+"\">"+file.name+"</a>\n" +
+										"<div><a href=\""+sysPath+"/FileUploadCtrl/downFile.do?requestid="+fileId+"&fieldName="+fieldName+"&fileName="+hz_encode(replace_(file.name))+"&d="+getTime()+"\">"+file.name+"</a>\n" +
 										"--\n" +
-										"<a  href=\"javascript:delFile('"+fileId+"','"+fieldName+"','"+file.name+"','"+sysPath+"')\">删除</a>\n" +
+										"<a  href=\"javascript:delFile('"+fileId+"','"+fieldName+"','"+replace_(file.name)+"','"+sysPath+"')\">删除</a>\n" +
 										"<br/></div>"
 								);
 							}
@@ -218,21 +217,24 @@ function hz_encode(fileName)
 	out=encodeURIComponent(out);//encodeURIComponent,tomcat自动帮助解开
 	return out;
 }
+
+//删除单引号
+function replace_(fileName)
+{
+	return replace(fileName,"'","");
+}
 function getTime()
 {
 	var d=new Date();
 	return d.getTime();
 }
 
-//把str中的v1，替换成v2
-function replace_(str,v1,v2)
-{
-	 var regS = new RegExp(v1, "gi");
-	 var s = str.replace(regS, v2);  
-	 return s;
+//把srcStr中的targetStr替换成replaceStr
+function replace(srcStr, targetStr, replaceStr) {
+    var regS = new RegExp(targetStr, "gi");
+    var s = srcStr.replace(regS, replaceStr); // 全部替换
+    return s;
 }
-
-
 // 删除文件
 function delFile(fileid, fieldName, fileName, sysPath) {
     $.ajax({
@@ -249,9 +251,9 @@ function delFile(fileid, fieldName, fileName, sysPath) {
 
         	//encodeURIComponent
         	// requestid=fd570108de1d4ef6ba532bb8a2a84a2c&fieldName=bizLicense&fileName=%E5%A4%8F%E6%98%95%C2%B7%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BAHibernate.pdf
-        	var str = "requestid="+data.requestId + "&fieldName=" + data.fieldName + "&fileName=" +hz_encode(data.fileName);
+        	var str = "requestid="+data.requestId + "&fieldName=" + data.fieldName + "&fileName=" +hz_encode(replace_(data.fileName));
             // var s=$("a[href$='"+str+"']").attr("href");
-            $("div[id^='fileList']>div>a[href*='" + str + "']")
+            $("div[id^='fileList']>div>a[href*=\"" + str + "\"]")
 							.parent().remove();
         }
     });
