@@ -24,10 +24,9 @@
 	function createSwfFun()
 	{
 		var fieldId = "${fileId}";
-	   swfu_bizLicense = createSwf(fieldId, "bizLicense", "上传营业执照副本", $("#fileList_bizLicense"), "${path}", 120);
+	    swfu_bizLicense = createSwf(fieldId, "bizLicense", "上传营业执照副本", $("#fileList_bizLicense"), "${path}", 120);
 	}
-	
-	
+    	
 </script>
 
 </head>
