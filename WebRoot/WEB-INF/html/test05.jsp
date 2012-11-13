@@ -14,7 +14,7 @@
 			var settings = {
 				flash_url : "${path}/resource5/swfupload.swf",
 				upload_url: "${path}/FileUploadCtrl/doupload.do",
-				file_queue_limit:"1",
+				//file_queue_limit:"1",//显示选中的文件的数量
 				post_params : {
 							"requestid" : "123", 
 							"fieldName":"photo"  
@@ -26,7 +26,7 @@
 				//	cancelButtonId : "btnCancel",
 				//	divStatus:"divStatus"
 				},
-		 		
+				
 				// Button settings
 				button_image_url: "${path}/resource5/bg_import.gif",
 				button_width: "75",
@@ -63,6 +63,7 @@ function uploadStart_(file) {
 		//progress.toggleCancel(true, this);
 	//}
 	//catch (ex) {}
+	
 	return true;
 }
 
