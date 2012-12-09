@@ -84,8 +84,8 @@ public class FileUploadCtrl
                       StringUT.getUUID());
         return mod;
     }
-
-
+    
+    
     @RequestMapping(value = "/doupload", method = RequestMethod.POST, produces = "text/json")
     public String doupload(@RequestParam("Filedata") MultipartFile file,
                            @RequestParam("requestid") String requestid,

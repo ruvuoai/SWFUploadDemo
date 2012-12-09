@@ -167,7 +167,7 @@ function createSwf(fileId,fieldName,btnTxt,fileListObj,sysPath, btnbgWidth)
 			            file_upload_limit : 100,
 			            file_queue_limit : 0,
 			            custom_settings : {
-			                progressTarget : "porgress_"+fieldName,
+			                progressTarget : "progress_"+fieldName,
 			                cancelButtonId : "cancel_"+fieldName,
 			                divStatus:"status_"+fieldName
 			            },

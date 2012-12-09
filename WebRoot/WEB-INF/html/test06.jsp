@@ -45,7 +45,7 @@
 				<td>
 					<div id="fileList_bizLicense" class="divFileList">
 					</div>
-					<div id="porgress_bizLicense"></div>
+					<div id="progress_bizLicense"></div>
 				</td>
 				
 			</tr>
